@@ -3,28 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia - Preços</title>
+    <title>Barbearia Elite - Preços</title>
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-    <header>
-        <h1>Preços dos Serviços</h1>
-    </header>
-    <main>
-        <div class="precos">
-            <h2>Cortes e Pigmentação</h2>
-            <p>Corte Masculino: R$ 25,00</p>
-            <p>Pigmentação: R$ 30,00</p>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>✂️ Barbearia Elite</h1>
+            </div>
+            <div class="progress">
+                <span class="step active">1</span>
+                <span class="step active">2</span>
+                <span class="step">3</span>
+                <span class="step">4</span>
+            </div>
+        </header>
 
-            <h2>Luzes e Platinados</h2>
-            <p>Luzes: R$ 50,00</p>
-            <p>Platinados: R$ 60,00</p>
+        <main class="precos-container">
+            <h2>2. Tabela de Preços</h2>
+            
+            <div class="preco-card">
+                <h3>Cortes</h3>
+                <div class="preco-lista">
+                    <div class="preco-item">Corte Clássico <span>R$ 35,00</span></div>
+                    <div class="preco-item">Degradê <span>R$ 40,00</span></div>
+                    <div class="preco-item">Social <span>R$ 45,00</span></div>
+                </div>
+            </div>
 
-            <h2>Sombrancelha</h2>
-            <p>Design de Sombrancelha: R$ 15,00</p>
-        </div>
-        <button onclick="window.location.href='pagina3.html'">Próximo</button>
-    </main>
+            <div class="preco-card">
+                <h3>Barba & Sombrancelha</h3>
+                <div class="preco-lista">
+                    <div class="preco-item">Barba Completa <span>R$ 30,00</span></div>
+                    <div class="preco-item">Sombrancelha <span>R$ 20,00</span></div>
+                    <div class="preco-item">Combo Barba + Corte <span>R$ 60,00</span></div>
+                </div>
+            </div>
+
+            <div class="preco-card">
+                <h3>Colorações</h3>
+                <div class="preco-lista">
+                    <div class="preco-item">Pigmentação <span>R$ 80,00</span></div>
+                    <div class="preco-item">Luzes <span>R$ 120,00</span></div>
+                    <div class="preco-item">Platinado Completo <span>R$ 180,00</span></div>
+                </div>
+            </div>
+
+            <button onclick="proximaPagina()" class="btn-next">Próximo → Agendamento</button>
+        </main>
+    </div>
+
     <script src="script2.js"></script>
 </body>
 </html>
