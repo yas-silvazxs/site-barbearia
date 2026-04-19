@@ -3,42 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia - Agendamento</title>
+    <title>Barbearia Elite - Agendamento</title>
     <link rel="stylesheet" href="style3.css">
 </head>
 <body>
-    <header>
-        <h1>Agendamento</h1>
-    </header>
-    <main>
-        <form id="agendamentoForm">
-            <label for="dia">Dia:</label>
-            <select id="dia" required>
-                <option value="">Selecione o dia</option>
-                <option value="Segunda">Segunda</option>
-                <option value="Terça">Terça</option>
-                <option value="Quarta">Quarta</option>
-                <option value="Quinta">Quinta</option>
-                <option value="Sexta">Sexta</option>
-                <option value="Sábado">Sábado</option>
-            </select>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>✂️ Barbearia Elite</h1>
+            </div>
+            <div class="progress">
+                <span class="step active">1</span>
+                <span class="step active">2</span>
+                <span class="step active">3</span>
+                <span class="step">4</span>
+            </div>
+        </header>
 
-            <label for="hora">Horário:</label>
-            <select id="hora" required>
-                <option value="">Selecione o horário</option>
-                <option value="09:00">09:00</option>
-                <option value="10:00">10:00</option>
-                <option value="11:00">11:00</option>
-                <option value="14:00">14:00</option>
-                <option value="15:00">15:00</option>
-                <option value="16:00">16:00</option>
-                <option value="17:00">17:00</option>
-                <option value="18:00">18:00</option>
-            </select>
+        <main class="agendamento-container">
+            <h2>3. Escolha seu Horário</h2>
+            
+            <div class="calendario">
+                <h3>Selecione o Dia:</h3>
+                <div class="dias-disponiveis" id="diasContainer">
+                    <!-- Dias serão gerados pelo JS -->
+                </div>
+            </div>
 
-            <button type="submit">Agendar</button>
-        </form>
-    </main>
+            <div class="horarios" id="horariosContainer" style="display: none;">
+                <h3>Horários Disponíveis:</h3>
+                <div class="horarios-lista" id="horariosLista">
+                    <!-- Horários serão gerados pelo JS -->
+                </div>
+            </div>
+
+            <button id="btnConfirmar" class="btn-next" style="display: none;" onclick="confirmarAgendamento()">
+                Confirmar Agendamento → Contato
+            </button>
+        </main>
+    </div>
+
     <script src="script3.js"></script>
 </body>
 </html>
