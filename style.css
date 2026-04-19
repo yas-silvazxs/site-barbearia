@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  background: #1d1d1d;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px 40px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.card h2 {
+  margin-bottom: 16px;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-top: 16px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button, .button {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 14px 24px;
+  background: #e25f3c;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:hover, .button:hover {
+  background: #c14d31;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  padding: 12px 18px;
+  background: #272727;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background: #444;
+}
+
+.prices-card ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.prices-card li {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.map-placeholder {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px dashed #aaa;
+  text-align: center;
+  border-radius: 12px;
+  background: #fafafa;
+}
+
+@media (max-width: 640px) {
+  .menu {
+    flex-direction: column;
+  }
+}

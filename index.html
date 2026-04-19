@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbearia - Cadastro</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Barbearia Nova</h1>
+    <p>Cadastre-se para agendar o seu serviço.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Cadastro do cliente</h2>
+      <form id="formCadastro">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(11) 91234-5678" required>
+
+        <label for="servico">Qual serviço você procura?</label>
+        <select id="servico" name="servico" required>
+          <option value="">Selecione...</option>
+          <option value="Barba">Barba</option>
+          <option value="Sobrancelha">Sobrancelha</option>
+          <option value="Cortes">Cortes</option>
+          <option value="Pigmentação">Pigmentação</option>
+          <option value="Luzes">Luzes</option>
+          <option value="Platinados">Platinados</option>
+          <option value="Outros">Outros</option>
+        </select>
+
+        <button type="submit">Salvar cadastro</button>
+      </form>
+    </section>
+
+    <nav class="menu">
+      <a href="prices.html">Preços</a>
+      <a href="schedule.html">Agendamento</a>
+      <a href="location.html">Localização</a>
+    </nav>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
