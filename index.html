@@ -3,37 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia - Cadastro</title>
+    <title>Barbearia Elite - Cadastro</title>
     <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo à Barbearia</h1>
-        <p>Faça seu cadastro para continuar</p>
-    </header>
-    <main>
-        <form id="cadastroForm">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" required>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>✂️ Barbearia Elite</h1>
+            </div>
+        </header>
 
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" required>
+        <main class="form-container">
+            <div class="form-card">
+                <h2>1. Cadastro do Cliente</h2>
+                <form id="cadastroForm">
+                    <div class="input-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="telefone">Telefone/WhatsApp:</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                    </div>
 
-            <label for="servico">Serviço Procurado:</label>
-            <select id="servico" required>
-                <option value="">Selecione</option>
-                <option value="Barba">Barba</option>
-                <option value="Sombrancelha">Sombrancelha</option>
-                <option value="Cortes">Cortes</option>
-                <option value="Pigmentação">Pigmentação</option>
-                <option value="Luzes">Luzes</option>
-                <option value="Platinados">Platinados</option>
-                <option value="Outros">Outros</option>
-            </select>
+                    <div class="input-group">
+                        <label>Serviço Desejado:</label>
+                        <select id="servico" name="servico" required>
+                            <option value="">Selecione um serviço</option>
+                            <option value="Barba">✂️ Barba</option>
+                            <option value="Sombrancelha">✨ Sombrancelha</option>
+                            <option value="Cortes">💇‍♂️ Cortes</option>
+                            <option value="Pigmentação">🎨 Pigmentação</option>
+                            <option value="Luzes">🌟 Luzes</option>
+                            <option value="Platinados">⭐ Platinados</option>
+                            <option value="Outros">❓ Outros</option>
+                        </select>
+                    </div>
 
-            <button type="submit">Próximo</button>
-        </form>
-    </main>
+                    <button type="submit" class="btn-next">Próximo → Preços</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
     <script src="script1.js"></script>
 </body>
 </html>
