@@ -1,9 +1,18 @@
 function proximaPagina() {
     // Verifica se tem dados do cliente
-    if (!localStorage.getItem('clienteDados')) {
-        alert('Por favor, faça o cadastro primeiro!');
+    const clienteDados = localStorage.getItem('clienteDados');
+    
+    if (!clienteDados) {
+        alert('❌ Por favor, faça o cadastro primeiro!');
         window.location.href = 'index.html';
         return;
     }
-    window.location.href = 'agendamento.html';
+    
+    // Redireciona para agendamento
+    window.location.href = 'pagina2.html';
+}
+
+// Botão voltar (opcional)
+function voltarCadastro() {
+    window.location.href = 'index.html';
 }
