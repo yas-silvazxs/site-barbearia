@@ -1,78 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    min-height: 100vh;
-    padding: 20px 0;
-}
-
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.logo h1 {
-    color: white;
-    font-size: 2.5em;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    margin-bottom: 10px;
-}
-
-.progress {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
-}
-
-.step {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.step.active {
-    background: white;
-    color: #00f2fe;
-}
-
-.agendamento-container {
-    background: rgba(255,255,255,0.95);
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-}
-
-.agendamento-container h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px;
-    font-size: 1.8em;
-}
-
-.agendamento-container h3 {
-    color: #555;
-    margin-bottom: 20px;
-    font-size: 1.3em;
-}
+/* ... (manter o CSS anterior e adicionar no final) */
 
 .dias-disponiveis {
     display: grid;
@@ -90,11 +16,13 @@ header {
     transition: all 0.3s ease;
     text-align: center;
     font-weight: bold;
+    font-size: 14px;
 }
 
 .dia-btn:hover {
     border-color: #4facfe;
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(79, 172, 254, 0.3);
 }
 
 .dia-btn.selecionado {
@@ -103,11 +31,14 @@ header {
     border-color: #4facfe;
 }
 
+.horarios {
+    margin-bottom: 30px;
+}
+
 .horarios-lista {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 15px;
-    margin-bottom: 30px;
 }
 
 .horario-btn {
@@ -119,6 +50,7 @@ header {
     transition: all 0.3s ease;
     text-align: center;
     font-weight: bold;
+    font-size: 16px;
 }
 
 .horario-btn:hover {
@@ -130,26 +62,15 @@ header {
     background: #00f2fe;
     color: white;
     border-color: #00f2fe;
-}
-
-.btn-next {
-    width: 100%;
-    padding: 18px;
-    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.btn-next:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(79, 172, 254, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
 }
 
 @media (max-width: 480px) {
     .dias-disponiveis {
-        grid
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .horarios-lista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
