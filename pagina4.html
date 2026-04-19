@@ -3,20 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia - Contato</title>
+    <title>Barbearia Elite - Agendamento Confirmado</title>
     <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Contato da Barbearia</h1>
-    </header>
-    <main>
-        <div class="contato">
-            <p><strong>Endereço:</strong> Rua das Barbas, 123 - Centro, Cidade</p>
-            <p><strong>Telefone:</strong> (11) 99999-9999</p>
-        </div>
-        <button id="confirmarBtn">Confirmar Agendamento</button>
-    </main>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1><i class="fas fa-cut"></i> Barbearia Elite</h1>
+            </div>
+            <div class="progress">
+                <span class="step active">1</span>
+                <span class="step active">2</span>
+                <span class="step active">3</span>
+                <span class="step active">4</span>
+            </div>
+        </header>
+
+        <main class="confirmacao-container">
+            <div class="check-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            
+            <h2>✅ Agendamento Confirmado!</h2>
+            <p class="subtitulo">Seu horário foi reservado com sucesso!</p>
+
+            <div class="detalhes-agendamento" id="detalhesAgendamento">
+                <!-- Detalhes serão preenchidos pelo JS -->
+            </div>
+
+            <div class="info-contato">
+                <h3><i class="fas fa-phone"></i> Contato da Barbearia</h3>
+                <div class="contato-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <strong>Endereço:</strong> Rua das Flores, 123 - Centro, São Paulo/SP
+                </div>
+                <div class="contato-item">
+                    <i class="fas fa-phone"></i>
+                    <strong>Telefone:</strong> (11) 99999-9999
+                </div>
+                <div class="contato-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <strong>WhatsApp:</strong> 
+                    <a href="https://wa.me/5511999999999" target="_blank">(11) 99999-9999</a>
+                </div>
+            </div>
+
+            <div class="botoes-final">
+                <button onclick="abrirWhatsapp()" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                </button>
+                <button onclick="novAgendamento()" class="btn-novo">
+                    <i class="fas fa-plus"></i> Novo Agendamento
+                </button>
+            </div>
+        </main>
+    </div>
+
     <script src="script4.js"></script>
 </body>
 </html>
