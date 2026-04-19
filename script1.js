@@ -1,12 +1,15 @@
-document.getElementById('cadastroForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const nome = document.getElementById('nome').value;
-    const telefone = document.getElementById('telefone').value;
-    const servico = document.getElementById('servico').value;
-
-    localStorage.setItem('nome', nome);
-    localStorage.setItem('telefone', telefone);
-    localStorage.setItem('servico', servico);
-
-    window.location.href = 'pagina2.html';
+document.getElementById('cadastroForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const dados = {
+        nome: document.getElementById('nome').value,
+        telefone: document.getElementById('telefone').value,
+        servico: document.getElementById('servico').value
+    };
+    
+    // Salva no localStorage
+    localStorage.setItem('clienteDados', JSON.stringify(dados));
+    
+    // Redireciona para página 2
+    window.location.href = 'precos.html';
 });
