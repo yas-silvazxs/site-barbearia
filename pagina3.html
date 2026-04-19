@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia - Agendamento</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <header>
+        <h1>Agendamento</h1>
+    </header>
+    <main>
+        <form id="agendamentoForm">
+            <label for="dia">Dia:</label>
+            <select id="dia" required>
+                <option value="">Selecione o dia</option>
+                <option value="Segunda">Segunda</option>
+                <option value="Terça">Terça</option>
+                <option value="Quarta">Quarta</option>
+                <option value="Quinta">Quinta</option>
+                <option value="Sexta">Sexta</option>
+                <option value="Sábado">Sábado</option>
+            </select>
+
+            <label for="hora">Horário:</label>
+            <select id="hora" required>
+                <option value="">Selecione o horário</option>
+                <option value="09:00">09:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+                <option value="17:00">17:00</option>
+                <option value="18:00">18:00</option>
+            </select>
+
+            <button type="submit">Agendar</button>
+        </form>
+    </main>
+    <script src="script3.js"></script>
+</body>
+</html>
