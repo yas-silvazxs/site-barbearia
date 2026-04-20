@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Elite - Corte Perfeito, Estilo Único</title>
+    <meta name="description" content="Barbearia premium com agendamento online, cortes modernos e barbas impecáveis. Agende agora!">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-cut"></i>
+                    <span>Barbearia Elite</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#agendamento">Agendar</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Corte Perfeito, <span class="highlight">Estilo Único</span></h1>
+            <p>Barbearia premium com barbeiros experientes e ambiente masculino. Agende seu horário agora!</p>
+            <div class="hero-buttons">
+                <a href="#agendamento" class="btn-primary">🎯 Agendar Online</a>
+                <a href="https://wa.me/5511999999999?text=Olá! Quero agendar um horário na Barbearia Elite!" class="btn-secondary" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1578631611826-1e5b429c1670?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Barbearia Elite" loading="lazy">
+        </div>
+    </section>
+
+    <!-- Agendamento Section -->
+    <section id="agendamento" class="agendamento">
+        <div class="container">
+            <div class="section-header">
+                <h2>Agendamento Online</h2>
+                <p class="section-subtitle">Escolha seu serviço e receba confirmação instantânea no WhatsApp</p>
+            </div>
+            
+            <div class="agendamento-form">
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> Nome Completo *</label>
+                        <input type="text" id="nome" placeholder="Ex: João Silva" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fas fa-phone"></i> Telefone/WhatsApp *</label>
+                            <input type="tel" id="telefone" placeholder="(11) 99999-9999" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-calendar"></i> Data Preferencial *</label>
+                            <input type="date" id="data" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fas fa-scissors"></i> Serviço *</label>
+                            <select id="servico" required>
+                                <option value="">Selecione...</option>
+                                <option value="Corte Masculino - R$45">Corte Masculino - R$45</option>
+                                <option value="Barba - R$35">Barba - R$35</option>
+                                <option value="Combo Corte+Barba - R$70">Combo Corte+Barba - R$70 🔥</option>
+                                <option value="Degradê - R$50">Degradê - R$50</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-user-tie"></i> Barbeiro Preferido *</label>
+                            <select id="barbeiro" required>
+                                <option value="">Selecione...</option>
+                                <option value="João Silva - Master Degradê">👑 João Silva (Degradê)</option>
+                                <option value="Marcos Santos - Clássico">✂️ Marcos Santos (Clássico)</option>
+                                <option value="Lucas Costa - Moderno">💈 Lucas Costa (Moderno)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-clock"></i> Melhor Horário *</label>
+                        <select id="horario" required>
+                            <option value="">Selecione horário...</option>
+                            <option value="09:00">🌅 09:00</option>
+                            <option value="10:00">🌅 10:00</option>
+                            <option value="11:00">🌅 11:00</option>
+                            <option value="14:00">🌞 14:00</option>
+                            <option value="15:00">🌞 15:00</option>
+                            <option value="16:00">🌞 16:00</option>
+                            <option value="17:00">🌇 17:00</option>
+                            <option value="18:00">🌇 18:00</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="primeiraVez" checked>
+                                <span class="checkmark"></span>
+                                Primeira vez na Elite? Ganhe 10% OFF!
+                            </label>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="planoMensal">
+                                <span class="checkmark"></span>
+                                Interessado no Plano Mensal?
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary full-width">
+                        <i class="fas fa-check-circle"></i> Confirmar e Enviar WhatsApp
+                    </button>
+                    <p class="form-info">
+                        ✅ Receberá confirmação instantânea no WhatsApp<br>
+                        📱 Usamos apenas para confirmar seu horário
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sobre a Barbearia Elite</h2>
+                <p>15 anos de excelência em cuidados masculinos</p>
+            </div>
+            
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <h3>Por que escolher a <span class="highlight">Elite?</span></h3>
+                    <p>Fundada em 2009, somos referência em São Paulo. Combinamos técnicas tradicionais com tendências modernas para entregar o <strong>melhor resultado</strong>.</p>
+                    
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">50K+</div>
+                            <div class="stat-label">Cortes Realizados</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">Anos de Experiência</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">4.9</div>
+                            <div class="stat-label">Avaliação Google</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="equipe">
+                    <div class="barbeiro-card">
+                        <div class="barbeiro-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&fit=crop&w=150&h=150" alt="João Silva" loading="lazy">
+                            <div class="status-online"></div>
+                        </div>
+                        <h4>João Silva</h4>
+                        <p>👑 Master Degradê</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>4.9 (450+)</span>
+                        </div>
+                    </div>
+                    <div class="barbeiro-card">
+                        <div class="barbeiro-avatar">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&fit=crop&w=150&h=150" alt="Marcos Santos" loading="lazy">
+                            <div class="status-online"></div>
+                        </div>
+                        <h4>Marcos Santos</h4>
+                        <p>✂️ Cortes Clássicos</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>5.0 (620+)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Serviços</h2>
+                <p>Preços fixos • Sem surpresas</p>
+            </div>
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-scissors"></i>
+                    </div>
+                    <h3>Corte Masculino</h3>
+                    <div class="preco">R$ 45</div>
+                    <ul>
+                        <li>✅ Lavagem completa</li>
+                        <li>✅ Corte personalizado</li>
+                        <li>✅ Navalha pescoço</li>
+                    </ul>
+                    <a href="#agendamento" class="btn-agendar">Agendar</a>
+                </div>
+                <div class="servico-card popular">
+                    <div class="popular-badge">🔥 Mais Vendido</div>
+                    <div class="servico-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Combo Elite</h3>
+                    <div class="preco">R$ 70 <span>Valor: R$90</span></div>
+                    <ul>
+                        <li>✅ Corte + Barba</li>
+                        <li>✅ Sobrancelha</li>
+                        <li>✅ 20% OFF</li>
+                    </ul>
+                    <a href="#agendamento" class="btn-agendar">Agendar Combo</a>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Plano Mensal</h3>
+                    <div class="preco">R$ 120<span>/mês</span></div>
+                    <ul>
+                        <li>✅ 4 cortes/mês</li>
+                        <li>✅ 20% OFF extras</li>
+                        <li>✅ Prioridade</li>
+                    </ul>
+                    <a href="https://wa.me/5511999999999?text=Olá! Quero saber do Plano Mensal!" class="btn-agendar" target="_blank">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Trabalhos</h2>
+                <p>Antes x Depois • Resultados reais</p>
+            </div>
+            <div class="galeria-grid">
+                <div class="galeria-item">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Degradê" loading="lazy">
+                    <div class="galeria-overlay">
+                        <span>Degradê Perfeito</span>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="https://images.unsplash.com/photo-1612813282357-2ea4c1ab691b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Barba" loading="lazy">
+                    <div class="galeria-overlay">
+                        <span>Barba Desenhada</span>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="https://images.unsplash.com/photo-1578631611826-1e5b429c1670?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Combo" loading="lazy">
+                    <div class="galeria-overlay">
+                        <span>Combo Elite</span>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="https://images.unsplash.com/photo-1624780349365-3defee8b8f12?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Fade" loading="lazy">
+                    <div class="galeria-overlay">
+                        <span>Fade Americano</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="depoimentos">
+        <div class="container">
+            <div class="section-header">
+                <h2>O Que Dizem Nossos Clientes</h2>
+            </div>
+            <div class="depoimentos-container">
+                <div class="depoimento active">
+                    <div class="estrelas">
+                        ★★★★★
+                    </div>
+                    <p>"Melhor barbearia da região! O João fez um degradê INCRÍVEL. Ambiente 5 estrelas!"</p>
+                    <div class="cliente">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop" alt="Carlos">
+                        <div>
+                            <h4>Carlos M.</h4>
+                            <span>⭐ 5.0 • 3 anos cliente</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento">
+                    <div class="estrelas">
+                        ★★★★★
+                    </div>
+                    <p>"Combo elite é imbatível! Atendimento top e sempre pontual. Recomendo 1000%!"</p>
+                    <div class="cliente">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=50&h=50&fit=crop" alt="Rafael">
+                        <div>
+                            <h4>Rafael S.</h4>
+                            <span>⭐ 5.0 • 2 anos cliente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="depoimentos-nav">
+                <button class="nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="nav-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <div class="section-header">
+                <h2>Entre em Contato</h2>
+            </div>
+            <div class="contato-grid">
+                <div class="contato-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Endereço</h3>
+                    <p>Rua das Flores, 123<br>Centro - São Paulo/SP<br>CEP: 01001-000</p>
+                </div>
+                <div class="contato-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Horários</h3>
+                    <p><strong>Seg-Sáb:</strong> 9h-20h<br><strong>Dom:</strong> 10h-16h</p>
+                </div>
+                <div class="contato-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Telefone</h3>
+                    <p>(11) 99999-9999<br><a href="https://wa.me/5511999999999" target="_blank">WhatsApp</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
